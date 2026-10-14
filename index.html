@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Control Frota — Controle total, sem surpresas.</title>
+<meta name="description" content="Control Frota — diário digital de utilização, inspeção e conservação de veículos.">
+<meta name="theme-color" content="#14315E">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand" data-nav="dashboard">
+    <img src="assets/icons/icon-96.png" alt="Control Frota" class="brand-logo">
+    <div class="brand-text">
+      <strong>CONTROL<span class="accent">FROTA</span></strong>
+      <small>Controle total, sem surpresas.</small>
+    </div>
+  </div>
+  <nav class="top-nav">
+    <button data-nav="dashboard" class="nav-link">Início</button>
+    <button data-nav="checklist" class="nav-link">Checklist</button>
+    <button data-nav="historico" class="nav-link">Histórico</button>
+    <button data-nav="relatorio" class="nav-link">Relatórios</button>
+    <button data-nav="veiculos" class="nav-link">Veículos</button>
+    <button data-nav="motoristas" class="nav-link">Motoristas</button>
+    <button data-nav="sinistros" class="nav-link">Sinistros</button>
+    <button data-nav="abastecimento" class="nav-link">Abastecimento</button>
+    <button data-nav="manutencoes" class="nav-link">Manutenções</button>
+    <button data-nav="pendencias" class="nav-link">Pendências</button>
+    <button data-nav="configuracoes" class="nav-link">Configurações</button>
+  </nav>
+  <button id="admin-badge" class="sync-btn" title="Entrar como administrador">🔒</button>
+</header>
+
+<main id="app" class="app-main"></main>
+
+<nav class="bottom-nav">
+  <button data-nav="dashboard" class="bnav-item"><span>🏠</span><small>Início</small></button>
+  <button data-nav="checklist" class="bnav-item"><span>📋</span><small>Checklist</small></button>
+  <button data-nav="historico" class="bnav-item"><span>📚</span><small>Histórico</small></button>
+  <button data-nav="relatorio" class="bnav-item"><span>📊</span><small>Relatórios</small></button>
+  <button data-nav="configuracoes" class="bnav-item"><span>⚙️</span><small>Config</small></button>
+</nav>
+
+<div id="modal-root"></div>
+
+<footer class="app-footer">
+  <p>CONTROL FROTA · Controle total, sem surpresas. — Criado por <strong>Fabio Castro</strong></p>
+</footer>
+
+<template id="tpl-toast">
+  <div class="toast"></div>
+</template>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
